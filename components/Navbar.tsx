@@ -5,9 +5,11 @@ interface NavbarProps {}
 function Navbar({}: NavbarProps) {
   return (
     <nav>
-      <div className='flex justify-between items-center container py-6 px-4 md:px-8'>
+      <div className='flex justify-between items-center container py-6 px-4 md:px-8 box-shadow: 0px -8px 26px -1px rgba(0, 0, 0, 0.25)'>
         {/* Logo */}
-        <div></div>
+        <div className='text-xl font-semibold'>
+          <Link href={'/'}>Karl George</Link>
+        </div>
         {/* Nav Links */}
         <div className=''>
           <ul className='flex-row hidden md:flex gap-12'>
