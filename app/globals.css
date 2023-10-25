@@ -4,6 +4,6 @@
 
 @layer base {
   .link {
-    @apply text-xl font-semibold hover:text-accent;
+    @apply text-lg font-semibold hover:text-accent;
   }
 }
