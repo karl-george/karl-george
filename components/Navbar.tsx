@@ -1,6 +1,26 @@
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 interface NavbarProps {}
+
+const navLinks = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'About',
+    href: '#about',
+  },
+  {
+    title: 'Projects',
+    href: '#projects',
+  },
+  {
+    title: 'Contact',
+    href: '#contact',
+  },
+];
 
 function Navbar({}: NavbarProps) {
   return (
@@ -10,20 +30,17 @@ function Navbar({}: NavbarProps) {
         <div className='text-xl font-semibold'>
           <Link href={'/'}>Karl George</Link>
         </div>
+        {/* Mobile Menu */}
+        <div className='block md:hidden '>
+          <MobileMenu navLinks={navLinks} />
+        </div>
         {/* Nav Links */}
         <ul className='flex-row hidden md:flex gap-12'>
-          <li className='link'>
-            <Link href={'/'}>Home</Link>
-          </li>
-          <li className='link'>
-            <Link href={'#about'}>About</Link>
-          </li>
-          <li className='link'>
-            <Link href={'#projects'}>Projects</Link>
-          </li>
-          <li className='link'>
-            <Link href={'#contact'}>Contact</Link>
-          </li>
+          {navLinks.map((link, idx) => (
+            <li className='link' key={idx}>
+              <Link href={link.href}>{link.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
