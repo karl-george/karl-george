@@ -9,7 +9,7 @@ function AboutSection({}: AboutSectionProps) {
         <div className='mb-20'>
           <h3 className='text-5xl font-bold text-center'>About</h3>
         </div>
-        <div className='flex flex-col lg:flex-row gap-28 justify-center items-center'>
+        <div className='flex flex-col lg:flex-row gap-10 lg:gap-28 justify-center items-center'>
           {/* Image  */}
           <Image
             src='/about-img.jpg'
