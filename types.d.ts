@@ -8,6 +8,6 @@ interface Project {
 
 interface Skill {
   _id: string;
-  name: string;
+  title: string;
   image: string;
 }
