@@ -15,7 +15,7 @@ function SkillIcon({ skill }: SkillIconProps) {
             src={skill.image}
             alt={skill.title}
             fill
-            className='object-contain'
+            className='object-contain hover:animate-jello'
           />
         </div>
       </div>
