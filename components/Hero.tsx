@@ -10,7 +10,7 @@ function Hero({}: HeroProps) {
           {/* Text */}
           <div className='col-span-7 space-y-6 lg:space-y-4 mx-auto text-center lg:text-left'>
             <h2 className='text-5xl lg:text-6xl font-bold text-textMain'>
-              Hello, I'm
+              Hello, I<span>&#39;</span>m
             </h2>
             <h1 className='text-7xl lg:text-[90px] font-bold text-textMain'>
               Karl George
