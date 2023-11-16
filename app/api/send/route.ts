@@ -1,5 +1,4 @@
 import Email from '@/components/Email';
-import { NextApiRequest } from 'next';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
