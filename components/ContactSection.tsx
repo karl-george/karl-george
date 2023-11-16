@@ -13,33 +13,6 @@ function ContactSection({}: ContactSectionProps) {
 
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = {
-      name,
-      email,
-      message,
-    };
-
-    const JSONdata = JSON.stringify(data);
-    const endpoint = '/api/send';
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log('Message Sent');
-      setEmailSubmitted(true);
-    }
-  };
-
   return (
     <section className='py-28 bg-bgDark' id='contact'>
       <div className='container'>
@@ -76,7 +49,11 @@ function ContactSection({}: ContactSectionProps) {
             </div>
           </div>
           {/* Form */}
-          <form className='flex flex-col w-96' onSubmit={handleSubmit}>
+          <form
+            className='flex flex-col w-96'
+            action={process.env.GET_FORM}
+            method='POST'
+          >
             <div>
               <input
                 type='text'
