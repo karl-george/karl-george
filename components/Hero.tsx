@@ -21,7 +21,7 @@ function Hero({}: HeroProps) {
           </div>
           {/* Image */}
           <div className='col-span-5 mx-auto'>
-            <div className=''>
+            <div>
               <Image
                 src='/hero-img.png'
                 width={450}
